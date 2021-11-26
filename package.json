@@ -1,11 +1,14 @@
 {
   "name": "@hodlvalley/sdk",
   "license": "MIT",
-  "version": "5.0.0-canary.40",
+  "version": "1.0.0",
   "description": "🛠 An SDK for building applications on top of HODL Valley.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "repository": "https://github.com/hodlvalley/hodl-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hodlvalley/hodl-sdk.git"
+  },
   "keywords": [
     "hodlvalley",
     "ethereum",
@@ -78,5 +81,13 @@
   },
   "engines": {
     "node": ">=12"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/hodlvalley/hodl-sdk/issues"
+  },
+  "homepage": "https://github.com/hodlvalley/hodl-sdk#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "hodlEngineer"
 }
