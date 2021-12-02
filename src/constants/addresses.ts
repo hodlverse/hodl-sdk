@@ -90,7 +90,7 @@ export const MONEY_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const FARMING_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0x1DA7f26ddAa8Cf7a4961011107F50C78Ed52Dd1D',
+  [ChainId.ROPSTEN]: '0x0cA9dB5467c9a05a74C215b993655aa93F15bA17',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
