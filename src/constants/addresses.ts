@@ -3,7 +3,7 @@ import { ChainId } from "../enums";
 
 export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0x96F3aD81A8F1C688465F4818feEc33e483f821AE',
+  [ChainId.ROPSTEN]: '0xae8b490cfeE5956925d81f8A729cF0C2f2C33ba4',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -33,7 +33,7 @@ export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
 export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
   [ChainId.RINKEBY]: '',
-  [ChainId.ROPSTEN]: '0xA512c52a9A9bA55De28Db0268f13b8147F1281c9',
+  [ChainId.ROPSTEN]: '0x34CB6629a08F234F72e9DC5bE0FB352e88824d24',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
   [ChainId.FANTOM]: '',
@@ -61,7 +61,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const MONEY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
-  [ChainId.ROPSTEN]: '0xD224DC5E2005c315A944a4f9635dbecC4FE2C451',
+  [ChainId.ROPSTEN]: '0xE366ECf71a1A3c57a79F58Cd6295437EE9B9B71D',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -90,7 +90,7 @@ export const MONEY_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const FARMING_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0x98fCBF32EdD17AcC3892B723F820a88983169846',
+  [ChainId.ROPSTEN]: '0x816822D1AAfD3186873c702a96213fd41884BA38',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -119,7 +119,7 @@ export const FARMING_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const STAKING_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0xef67239950364b22e6474a5bbe9cc075c4026c82',
+  [ChainId.ROPSTEN]: '0x2D3882b6451c93e0707bbF0C4F1F05EeB096afd5',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -148,7 +148,7 @@ export const STAKING_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const TIME_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0x98C1B5E65226A628589B055cFFD8452e1945C31d',
+  [ChainId.ROPSTEN]: '0xe7C693003B925633355759ACf6F3e6EAC4E0217d',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -177,7 +177,7 @@ export const TIME_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const MIGRATOR_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0xA7E18a61b54D6eB00B1e7425BE0137bAe21FFFfF',
+  [ChainId.ROPSTEN]: '0x5ACdEa5DA498f0162c9d3f8174E05090F0024bc5',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -206,7 +206,7 @@ export const MIGRATOR_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const WETH_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
+  [ChainId.ROPSTEN]: '0xA3B45B73067fd2282aAB67436747e9b310254EBd',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -235,7 +235,7 @@ export const WETH_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const BUYBACK_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0x5ff9c2233e48210235d356fc61e48e1fcfcc102f',
+  [ChainId.ROPSTEN]: '0x8f9F1910f6fC071cC5D850AaA740F2C9795A1C9d',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
@@ -264,7 +264,7 @@ export const BUYBACK_ADDRESS: { [chainId in ChainId]: string } = {
 
 export const RESERVE_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',
-  [ChainId.ROPSTEN]: '0x22661F2f798e2dc8B798fbEEFC0096EC01F65874',
+  [ChainId.ROPSTEN]: '0x69a97d0092a43880210aFAe4e4971eb4DcC58f13',
   [ChainId.RINKEBY]: '',
   [ChainId.GÖRLI]: '',
   [ChainId.KOVAN]: '',
