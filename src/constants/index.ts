@@ -6,7 +6,7 @@ export * from "./tokens";
 export * from "./numbers";
 
 export const INIT_CODE_HASH: string =
-  "0x20542064e2c50e24ae49dfaf22d3d9486045828660e9e24ff8f6cfefea38d7b9";
+  "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000);
 
