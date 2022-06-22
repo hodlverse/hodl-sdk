@@ -254,3 +254,68 @@ export const WNATIVE: { [chainId: number]: Token } = {
     "Wrapped Palm"
   )
 };
+
+
+// function hardcodedSymbol(address: Address): string|null {
+//   if (address.toHex() === '0x0d840469d56c0c1725d1a64da6a7e9e0143f4a10') {
+//     return 'WETH'
+//   }
+//   if (address.toHex() === '0x2b4ebd749c6ac2cd8d80fd8e2198e2360248ecc1') {
+//     return 'DAI'
+//   }
+//   if (address.toHex() === '0x7bbba710c55e48e460bf72e1cc2e1a3a1ca9290b') {
+//     return 'USDT'
+//   }
+//   if (address.toHex() === '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee') {
+//     return 'BUSD'
+//   }
+//   return null
+// }
+//
+// function hardcodedName(address: Address): string|null {
+//   if (address.toHex() === '0x0d840469d56c0c1725d1a64da6a7e9e0143f4a10') {
+//     return 'Wrapped Ether'
+//   }
+//   if (address.toHex() === '0x2b4ebd749c6ac2cd8d80fd8e2198e2360248ecc1') {
+//     return 'Binance-Peg Dai Token'
+//   }
+//   if (address.toHex() === '0x7bbba710c55e48e460bf72e1cc2e1a3a1ca9290b') {
+//     return 'Binance-Peg USDT Token'
+//   }
+//   if (address.toHex() === '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee') {
+//     return 'Binance USD'
+//   }
+//   return null
+// }
+//
+// function hardcodedDecimals(address: Address) : BigInt | null{
+//   if (address.toHex() === '0x0d840469d56c0c1725d1a64da6a7e9e0143f4a10') {
+//     return BigInt.fromI32(18)
+//   }
+//   if (address.toHex() === '0x2b4ebd749c6ac2cd8d80fd8e2198e2360248ecc1') {
+//     return BigInt.fromI32(18)
+//   }
+//   if (address.toHex() === '0x7bbba710c55e48e460bf72e1cc2e1a3a1ca9290b') {
+//     return BigInt.fromI32(18)
+//   }
+//   if (address.toHex() === '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee') {
+//     return BigInt.fromI32(18)
+//   }
+//   return null
+// }
+//
+// function hardcodedTotalSupply(address: Address): BigInt | null {
+//   if (address.toHex() === '0x0d840469d56c0c1725d1a64da6a7e9e0143f4a10') {
+//     return BigInt.fromI32(1)
+//   }
+//   if (address.toHex() === '0x2b4ebd749c6ac2cd8d80fd8e2198e2360248ecc1') {
+//     return BigInt.fromI32(1)
+//   }
+//   if (address.toHex() === '0x7bbba710c55e48e460bf72e1cc2e1a3a1ca9290b') {
+//     return BigInt.fromI32(1)
+//   }
+//   if (address.toHex() === '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee') {
+//     return BigInt.fromI32(1)
+//   }
+//   return null
+// }
