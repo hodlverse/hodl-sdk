@@ -1,5 +1,5 @@
 import JSBI from "jsbi";
-import {ChainId} from "enums";
+import {ChainId} from '../enums/index'
 
 export * from "./addresses";
 export * from "./natives";
@@ -12,8 +12,8 @@ export const INIT_CODE_HASH: string =
 
 
 export const CHAIN_INIT_CODE_HASH: {[chainId in number]: string} = {
-  [ChainId.MAINNET]: "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca",
-  [ChainId.ROPSTEN]: "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca",
+  [ChainId.MAINNET]: INIT_CODE_HASH,
+  [ChainId.ROPSTEN]: INIT_CODE_HASH,
   [ChainId.BSC_TESTNET]: '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c'
 }
 

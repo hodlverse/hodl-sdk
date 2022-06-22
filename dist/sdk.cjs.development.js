@@ -5,7 +5,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var JSBI = _interopDefault(require('jsbi'));
-var enums = require('enums');
 var invariant = _interopDefault(require('tiny-invariant'));
 var address = require('@ethersproject/address');
 var warning = _interopDefault(require('tiny-warning'));
@@ -887,7 +886,7 @@ var _980 = /*#__PURE__*/JSBI.BigInt(980);
 
 var _CHAIN_INIT_CODE_HASH, _SOLIDITY_TYPE_MAXIMA;
 var INIT_CODE_HASH = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
-var CHAIN_INIT_CODE_HASH = (_CHAIN_INIT_CODE_HASH = {}, _CHAIN_INIT_CODE_HASH[enums.ChainId.MAINNET] = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca", _CHAIN_INIT_CODE_HASH[enums.ChainId.ROPSTEN] = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca", _CHAIN_INIT_CODE_HASH[enums.ChainId.BSC_TESTNET] = '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c', _CHAIN_INIT_CODE_HASH);
+var CHAIN_INIT_CODE_HASH = (_CHAIN_INIT_CODE_HASH = {}, _CHAIN_INIT_CODE_HASH[exports.ChainId.MAINNET] = INIT_CODE_HASH, _CHAIN_INIT_CODE_HASH[exports.ChainId.ROPSTEN] = INIT_CODE_HASH, _CHAIN_INIT_CODE_HASH[exports.ChainId.BSC_TESTNET] = '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c', _CHAIN_INIT_CODE_HASH);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000);
 
 (function (SolidityType) {
