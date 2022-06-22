@@ -1307,7 +1307,6 @@ var computePairAddress = function computePairAddress(_ref) {
 
 
   var initHash = CHAIN_INIT_CODE_HASH[token0.chainId];
-  console.log(initHash, 'initHash');
   return address.getCreate2Address(factoryAddress, solidity.keccak256(["bytes"], [solidity.pack(["address", "address"], [token0.address, token1.address])]), initHash ? initHash : INIT_CODE_HASH);
 };
 var FeeAmount;

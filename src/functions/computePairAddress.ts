@@ -20,7 +20,6 @@ export const computePairAddress = ({
 
 
   const initHash = CHAIN_INIT_CODE_HASH[token0.chainId]
-  console.log(initHash, 'initHash')
   return getCreate2Address(
     factoryAddress,
     keccak256(
