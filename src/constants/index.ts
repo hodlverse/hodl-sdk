@@ -1,15 +1,21 @@
 import JSBI from "jsbi";
+import {ChainId} from "enums";
 
 export * from "./addresses";
 export * from "./natives";
 export * from "./tokens";
 export * from "./numbers";
 
-// export const INIT_CODE_HASH: string =
-//   "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
-
 export const INIT_CODE_HASH: string =
-  "0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c";
+  "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
+
+
+
+export const CHAIN_INIT_CODE_HASH: {[chainId in number]: string} = {
+  [ChainId.MAINNET]: "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca",
+  [ChainId.ROPSTEN]: "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca",
+  [ChainId.BSC_TESTNET]: '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c'
+}
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000);
 

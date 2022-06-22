@@ -1,6 +1,6 @@
 import { keccak256, pack } from "@ethersproject/solidity";
 
-import { INIT_CODE_HASH } from "../constants";
+import {  INIT_CODE_HASH, CHAIN_INIT_CODE_HASH } from "../constants";
 // import { Percent } from 'entities'
 import { Token } from "../entities/Token";
 import { getCreate2Address } from "@ethersproject/address";
@@ -18,13 +18,16 @@ export const computePairAddress = ({
     ? [tokenA, tokenB]
     : [tokenB, tokenA]; // does safety checks
 
+
+  const initHash = CHAIN_INIT_CODE_HASH[token0.chainId]
+  console.log(initHash, 'initHash')
   return getCreate2Address(
     factoryAddress,
     keccak256(
       ["bytes"],
       [pack(["address", "address"], [token0.address, token1.address])]
     ),
-    INIT_CODE_HASH
+      initHash ? initHash: INIT_CODE_HASH
   );
 };
 

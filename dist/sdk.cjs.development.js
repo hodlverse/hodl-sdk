@@ -5,6 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var JSBI = _interopDefault(require('jsbi'));
+var enums = require('enums');
 var invariant = _interopDefault(require('tiny-invariant'));
 var address = require('@ethersproject/address');
 var warning = _interopDefault(require('tiny-warning'));
@@ -884,10 +885,9 @@ var _1000 = /*#__PURE__*/JSBI.BigInt(1000);
 var _960 = /*#__PURE__*/JSBI.BigInt(960);
 var _980 = /*#__PURE__*/JSBI.BigInt(980);
 
-var _SOLIDITY_TYPE_MAXIMA;
-//   "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
-
-var INIT_CODE_HASH = "0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c";
+var _CHAIN_INIT_CODE_HASH, _SOLIDITY_TYPE_MAXIMA;
+var INIT_CODE_HASH = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
+var CHAIN_INIT_CODE_HASH = (_CHAIN_INIT_CODE_HASH = {}, _CHAIN_INIT_CODE_HASH[enums.ChainId.MAINNET] = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca", _CHAIN_INIT_CODE_HASH[enums.ChainId.ROPSTEN] = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca", _CHAIN_INIT_CODE_HASH[enums.ChainId.BSC_TESTNET] = '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c', _CHAIN_INIT_CODE_HASH);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000);
 
 (function (SolidityType) {
@@ -1307,7 +1307,9 @@ var computePairAddress = function computePairAddress(_ref) {
       token1 = _ref2[1]; // does safety checks
 
 
-  return address.getCreate2Address(factoryAddress, solidity.keccak256(["bytes"], [solidity.pack(["address", "address"], [token0.address, token1.address])]), INIT_CODE_HASH);
+  var initHash = CHAIN_INIT_CODE_HASH[token0.chainId];
+  console.log(initHash, 'initHash');
+  return address.getCreate2Address(factoryAddress, solidity.keccak256(["bytes"], [solidity.pack(["address", "address"], [token0.address, token1.address])]), initHash ? initHash : INIT_CODE_HASH);
 };
 var FeeAmount;
 
@@ -4746,6 +4748,7 @@ exports.BORING_HELPER_ADDRESS = BORING_HELPER_ADDRESS;
 exports.BUYBACK_ADDRESS = BUYBACK_ADDRESS;
 exports.Binance = Binance;
 exports.CHAINLINK_ORACLE_ADDRESS = CHAINLINK_ORACLE_ADDRESS;
+exports.CHAIN_INIT_CODE_HASH = CHAIN_INIT_CODE_HASH;
 exports.Celo = Celo;
 exports.ConstantProductPool = ConstantProductPool;
 exports.CurrencyAmount = CurrencyAmount;

@@ -4,6 +4,9 @@ export * from "./natives";
 export * from "./tokens";
 export * from "./numbers";
 export declare const INIT_CODE_HASH: string;
+export declare const CHAIN_INIT_CODE_HASH: {
+    [chainId in number]: string;
+};
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare enum SolidityType {
     uint8 = "uint8",

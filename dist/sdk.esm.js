@@ -1,5 +1,6 @@
 import JSBI from 'jsbi';
 export { default as JSBI } from 'jsbi';
+import { ChainId as ChainId$1 } from 'enums';
 import invariant from 'tiny-invariant';
 import { getAddress, getCreate2Address } from '@ethersproject/address';
 import warning from 'tiny-warning';
@@ -887,10 +888,9 @@ var _1000 = /*#__PURE__*/JSBI.BigInt(1000);
 var _960 = /*#__PURE__*/JSBI.BigInt(960);
 var _980 = /*#__PURE__*/JSBI.BigInt(980);
 
-var _SOLIDITY_TYPE_MAXIMA;
-//   "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
-
-var INIT_CODE_HASH = "0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c";
+var _CHAIN_INIT_CODE_HASH, _SOLIDITY_TYPE_MAXIMA;
+var INIT_CODE_HASH = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
+var CHAIN_INIT_CODE_HASH = (_CHAIN_INIT_CODE_HASH = {}, _CHAIN_INIT_CODE_HASH[ChainId$1.MAINNET] = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca", _CHAIN_INIT_CODE_HASH[ChainId$1.ROPSTEN] = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca", _CHAIN_INIT_CODE_HASH[ChainId$1.BSC_TESTNET] = '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c', _CHAIN_INIT_CODE_HASH);
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000);
 var SolidityType;
 
@@ -1311,7 +1311,9 @@ var computePairAddress = function computePairAddress(_ref) {
       token1 = _ref2[1]; // does safety checks
 
 
-  return getCreate2Address(factoryAddress, keccak256(["bytes"], [pack(["address", "address"], [token0.address, token1.address])]), INIT_CODE_HASH);
+  var initHash = CHAIN_INIT_CODE_HASH[token0.chainId];
+  console.log(initHash, 'initHash');
+  return getCreate2Address(factoryAddress, keccak256(["bytes"], [pack(["address", "address"], [token0.address, token1.address])]), initHash ? initHash : INIT_CODE_HASH);
 };
 var FeeAmount;
 
@@ -4742,5 +4744,5 @@ var FillLimitOrder = /*#__PURE__*/function () {
   return FillLimitOrder;
 }();
 
-export { ARCHER_ROUTER_ADDRESS, ASSERT, AbstractCurrency, Avalanche, BENTOBOX_ADDRESS, BORING_HELPER_ADDRESS, BUYBACK_ADDRESS, Binance, CHAINLINK_ORACLE_ADDRESS, Celo, ChainId, ConstantProductPool, CurrencyAmount, ENS_REGISTRAR_ADDRESS, Ether, FACTORY_ADDRESS, FARMING_ADDRESS, FIVE, Fantom, FillLimitOrder, Fraction, HODL_MULTISWAPPER_ADDRESS, HODL_MULTI_EXACT_SWAPPER_ADDRESS, HODL_SWAPPER_ADDRESS, HODL_TWAP_0_ORACLE_ADDRESS, HODL_TWAP_1_ORACLE_ADDRESS, Harmony, Heco, HybridComputeLiquidity, HybridPool, HybridgetY, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, KASHI_ADDRESS, KashiAction, LAMBDA_URL, LimitOrder, MAKER_ADDRESS, MASTERCHEF_V2_ADDRESS, MERKLE_DISTRIBUTOR_ADDRESS, MIGRATOR_ADDRESS, MINICHEF_ADDRESS, MINIMUM_LIQUIDITY, MONEY_ADDRESS, MULTICALL2_ADDRESS, Matic, MaxUint256, NATIVE, NativeCurrency, ONE, Okex, PEGGED_ORACLE_ADDRESS, Pair, Palm, Percent, Pool, PoolType, Price, RESERVE_ADDRESS, ROUTER_ADDRESS, Rounding, Route, Router, SOCKET_URL, SOLIDITY_TYPE_MAXIMA, STAKING_ADDRESS, STOP_LIMIT_ORDER_ADDRESS, SolidityType, TEN, THREE, TIME_ADDRESS, TWO, Token, Trade, TradeType, WETH9, WETH9_ADDRESS, WETH_ADDRESS, WNATIVE, WNATIVE_ADDRESS, WeightedPool, ZAPPER_ADDRESS, ZERO, _100, _1000, _960, _980, _997, bentoTypes, calcInByOut, calcInputByPrice, calcOutByIn, calcPrice, calcSquareEquation, closeValues, computePairAddress, computePriceImpact, currencyEquals, getBigNumber, getSignature, getSignatureBento, getSignatureWithProvider, getSignatureWithProviderBentobox, getTypeHash, getTypedData, getTypedDataBento, inputOutputComparator, name, revertPositive, sortedInsert, sqrt, toHex, tradeComparator, types, validateAndParseAddress, validateSolidityTypeInstance, xDai };
+export { ARCHER_ROUTER_ADDRESS, ASSERT, AbstractCurrency, Avalanche, BENTOBOX_ADDRESS, BORING_HELPER_ADDRESS, BUYBACK_ADDRESS, Binance, CHAINLINK_ORACLE_ADDRESS, CHAIN_INIT_CODE_HASH, Celo, ChainId, ConstantProductPool, CurrencyAmount, ENS_REGISTRAR_ADDRESS, Ether, FACTORY_ADDRESS, FARMING_ADDRESS, FIVE, Fantom, FillLimitOrder, Fraction, HODL_MULTISWAPPER_ADDRESS, HODL_MULTI_EXACT_SWAPPER_ADDRESS, HODL_SWAPPER_ADDRESS, HODL_TWAP_0_ORACLE_ADDRESS, HODL_TWAP_1_ORACLE_ADDRESS, Harmony, Heco, HybridComputeLiquidity, HybridPool, HybridgetY, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, KASHI_ADDRESS, KashiAction, LAMBDA_URL, LimitOrder, MAKER_ADDRESS, MASTERCHEF_V2_ADDRESS, MERKLE_DISTRIBUTOR_ADDRESS, MIGRATOR_ADDRESS, MINICHEF_ADDRESS, MINIMUM_LIQUIDITY, MONEY_ADDRESS, MULTICALL2_ADDRESS, Matic, MaxUint256, NATIVE, NativeCurrency, ONE, Okex, PEGGED_ORACLE_ADDRESS, Pair, Palm, Percent, Pool, PoolType, Price, RESERVE_ADDRESS, ROUTER_ADDRESS, Rounding, Route, Router, SOCKET_URL, SOLIDITY_TYPE_MAXIMA, STAKING_ADDRESS, STOP_LIMIT_ORDER_ADDRESS, SolidityType, TEN, THREE, TIME_ADDRESS, TWO, Token, Trade, TradeType, WETH9, WETH9_ADDRESS, WETH_ADDRESS, WNATIVE, WNATIVE_ADDRESS, WeightedPool, ZAPPER_ADDRESS, ZERO, _100, _1000, _960, _980, _997, bentoTypes, calcInByOut, calcInputByPrice, calcOutByIn, calcPrice, calcSquareEquation, closeValues, computePairAddress, computePriceImpact, currencyEquals, getBigNumber, getSignature, getSignatureBento, getSignatureWithProvider, getSignatureWithProviderBentobox, getTypeHash, getTypedData, getTypedDataBento, inputOutputComparator, name, revertPositive, sortedInsert, sqrt, toHex, tradeComparator, types, validateAndParseAddress, validateSolidityTypeInstance, xDai };
 //# sourceMappingURL=sdk.esm.js.map
