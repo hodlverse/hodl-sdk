@@ -13,7 +13,7 @@ export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MATIC_TESTNET]: '',
   [ChainId.XDAI]: '',
   [ChainId.BSC]: '',
-  [ChainId.BSC_TESTNET]: '0xae8b490cfeE5956925d81f8A729cF0C2f2C33ba4',
+  [ChainId.BSC_TESTNET]: '0x062D74dFAB4aE5E15d06126d3EEF123584F166B0',
   [ChainId.ARBITRUM]: '',
   [ChainId.ARBITRUM_TESTNET]: '',
   [ChainId.MOONBEAM_TESTNET]: '',
