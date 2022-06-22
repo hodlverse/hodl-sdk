@@ -888,7 +888,9 @@ var _960 = /*#__PURE__*/JSBI.BigInt(960);
 var _980 = /*#__PURE__*/JSBI.BigInt(980);
 
 var _SOLIDITY_TYPE_MAXIMA;
-var INIT_CODE_HASH = "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
+//   "0x7edb55532c9a5d7bdedb5a640ae4ff9929cdaa8d48365bed84375c624a3726ca";
+
+var INIT_CODE_HASH = "0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c";
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000);
 var SolidityType;
 
