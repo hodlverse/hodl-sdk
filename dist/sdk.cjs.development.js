@@ -1378,7 +1378,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(currencyAmountA, tokenAmountB) {
     var tokenAmounts = currencyAmountA.currency.sortsBefore(tokenAmountB.currency) // does safety checks
     ? [currencyAmountA, tokenAmountB] : [tokenAmountB, currencyAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].currency.chainId, Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency), 18, "UNI-V2", "Uniswap V2");
+    this.liquidityToken = new Token(tokenAmounts[0].currency.chainId, Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency), 18, "HVLP", "HVLP");
     this.tokenAmounts = tokenAmounts;
   }
 
