@@ -100,7 +100,7 @@ export const FARMING_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MATIC_TESTNET]: '',
   [ChainId.XDAI]: '',
   [ChainId.BSC]: '',
-  [ChainId.BSC_TESTNET]: '0xA512c52a9A9bA55De28Db0268f13b8147F1281c9',
+  [ChainId.BSC_TESTNET]: '0x2C9E3A0AAaCd6467AA6e50b6368C07AAD3c67B0e',
   [ChainId.ARBITRUM]: '',
   [ChainId.ARBITRUM_TESTNET]: '',
   [ChainId.MOONBEAM_TESTNET]: '',
