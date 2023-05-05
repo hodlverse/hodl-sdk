@@ -2,6 +2,7 @@ import { Avalanche, Binance, Celo, Ether, Fantom, Harmony, Heco, Matic, Okex, Pa
 import { ChainId } from "../enums";
 export declare const NATIVE: {
     1: Ether;
+    11155111: Ether;
     3: Ether;
     4: Ether;
     5: Ether;

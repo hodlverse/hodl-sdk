@@ -18,6 +18,13 @@ export const WETH9: { [chainId: number]: Token } = {
     "WETH9",
     "Wrapped Ether"
   ),
+  [ChainId.SEPOLIA]: new Token(
+      ChainId.SEPOLIA,
+      WETH9_ADDRESS[ChainId.SEPOLIA],
+      18,
+      "WETH9",
+      "Wrapped Ether"
+  ),
   [ChainId.RINKEBY]: new Token(
     ChainId.RINKEBY,
     WETH9_ADDRESS[ChainId.RINKEBY],

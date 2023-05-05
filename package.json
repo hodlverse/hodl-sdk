@@ -37,6 +37,7 @@
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.0",
     "levenary": "^1.1.1",
+    "sync-directory": "^6.0.4",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3",
     "toformat": "^2.0.0"

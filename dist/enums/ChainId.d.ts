@@ -1,5 +1,6 @@
 export declare enum ChainId {
     MAINNET = 1,
+    SEPOLIA = 11155111,
     ROPSTEN = 3,
     BITCOIN_MAINNET = 1,
     BITCOIN_TESTNET = 3,
