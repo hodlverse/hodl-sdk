@@ -1,7 +1,7 @@
 {
   "name": "@hodlvalley/sdk",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "🛠 An SDK for building applications on top of HODL Valley.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -14,7 +14,6 @@
     "ethereum",
     "sdk"
   ],
-  "module": "dist/sdk.esm.js",
   "scripts": {
     "lint": "tsdx lint src test",
     "build": "tsdx build",
@@ -22,7 +21,8 @@
     "test": "tsdx test",
     "prepublishOnly": "tsdx build",
     "prepare": "husky install",
-    "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'"
+    "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
+    "sync-lib": "syncdir . ../hodl/ui/node_modules/@hodlvalley/sdk"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
