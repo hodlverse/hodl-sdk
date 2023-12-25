@@ -4,6 +4,13 @@ import { ChainId } from "../enums";
 import { Token } from "../entities/Token";
 
 export const WETH9: { [chainId: number]: Token } = {
+  [ChainId.SEPOLIA]: new Token(
+      ChainId.SEPOLIA,
+      WETH9_ADDRESS[ChainId.SEPOLIA],
+      18,
+      "WETH9",
+      "Wrapped Ether"
+  ),
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
     WETH9_ADDRESS[ChainId.MAINNET],
@@ -17,13 +24,6 @@ export const WETH9: { [chainId: number]: Token } = {
     18,
     "WETH9",
     "Wrapped Ether"
-  ),
-  [ChainId.SEPOLIA]: new Token(
-      ChainId.SEPOLIA,
-      WETH9_ADDRESS[ChainId.SEPOLIA],
-      18,
-      "WETH9",
-      "Wrapped Ether"
   ),
   [ChainId.RINKEBY]: new Token(
     ChainId.RINKEBY,
@@ -127,6 +127,7 @@ export const WETH9: { [chainId: number]: Token } = {
 };
 
 export const WNATIVE: { [chainId: number]: Token } = {
+  [ChainId.SEPOLIA]: WETH9[ChainId.SEPOLIA],
   [ChainId.MAINNET]: WETH9[ChainId.MAINNET],
   [ChainId.ROPSTEN]: WETH9[ChainId.ROPSTEN],
   [ChainId.RINKEBY]: WETH9[ChainId.RINKEBY],
@@ -259,7 +260,7 @@ export const WNATIVE: { [chainId: number]: Token } = {
     18,
     "WPALM",
     "Wrapped Palm"
-  )
+  ),
 };
 
 

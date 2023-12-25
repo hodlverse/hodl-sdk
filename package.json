@@ -22,7 +22,7 @@
     "prepublishOnly": "tsdx build",
     "prepare": "husky install",
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
-    "sync-lib": "syncdir . ../hodl/ui/node_modules/@hodlvalley/sdk"
+    "sync-lib": "syncdir . ../hodl/ui/node_modules/@hodlvalley/sdk -w"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -37,7 +37,6 @@
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.0",
     "levenary": "^1.1.1",
-    "sync-directory": "^6.0.4",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3",
     "toformat": "^2.0.0"
@@ -58,6 +57,7 @@
     "isomorphic-unfetch": "^3.1.0"
   },
   "devDependencies": {
+    "sync-directory": "^6.0.4",
     "@ethersproject/abi": "^5.4.0",
     "@ethersproject/abstract-signer": "^5.4.0",
     "@ethersproject/address": "^5.4.0",
