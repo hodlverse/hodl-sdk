@@ -12,10 +12,10 @@ export const INIT_CODE_HASH: string =
 
 
 export const CHAIN_INIT_CODE_HASH: {[chainId in number]: string} = {
-  [ChainId.MAINNET]: INIT_CODE_HASH,
-  [ChainId.ROPSTEN]: INIT_CODE_HASH,
+  // [ChainId.MAINNET]: INIT_CODE_HASH,
+  // [ChainId.ROPSTEN]: INIT_CODE_HASH,
   [ChainId.SEPOLIA]: "0x20542064e2c50e24ae49dfaf22d3d9486045828660e9e24ff8f6cfefea38d7b9",
-  [ChainId.BSC_TESTNET]: '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c'
+  // [ChainId.BSC_TESTNET]: '0xbc92fd4a82da617eff9239cf9a6484c08bd5fb38daa1ac6d2f0ae03fd949a36c'
 }
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000);
