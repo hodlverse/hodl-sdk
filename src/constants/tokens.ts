@@ -1,8 +1,26 @@
-import { WETH9_ADDRESS, WNATIVE_ADDRESS } from "./addresses";
+import {MONEY_ADDRESS, STAKING_ADDRESS, WETH9_ADDRESS, WNATIVE_ADDRESS} from "./addresses";
 
 import { ChainId } from "../enums";
 import { Token } from "../entities/Token";
 
+
+type ChainTokenMap = {
+  readonly [chainId in ChainId]?: Token
+}
+export const XMONEY: ChainTokenMap = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, STAKING_ADDRESS[ChainId.MAINNET], 18, 'XMONEY', 'XMONEY'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, STAKING_ADDRESS[ChainId.ROPSTEN], 18, 'XMONEY', 'XMONEY'),
+  [ChainId.SEPOLIA]: new Token(ChainId.SEPOLIA, STAKING_ADDRESS[ChainId.SEPOLIA], 18, 'XMONEY', 'XMONEY'),
+  // if uncomment next line, then build fails
+  // [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, STAKING_ADDRESS[ChainId.BSC_TESTNET], 18, 'XMONEY', 'XMONEY'),
+}
+export const MONEY: ChainTokenMap = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, MONEY_ADDRESS[ChainId.MAINNET], 18, 'MONEY', 'MONEY'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, MONEY_ADDRESS[ChainId.ROPSTEN], 18, 'MONEY', 'MONEY'),
+  [ChainId.SEPOLIA]: new Token(ChainId.SEPOLIA, MONEY_ADDRESS[ChainId.SEPOLIA], 18, 'MONEY', 'MONEY'),
+  // if uncomment next line, then build fails
+  // [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, MONEY_ADDRESS[ChainId.BSC_TESTNET], 18, 'MONEY', 'MONEY'),
+}
 export const WETH9: { [chainId: number]: Token } = {
   [ChainId.SEPOLIA]: new Token(
       ChainId.SEPOLIA,
@@ -124,6 +142,39 @@ export const WETH9: { [chainId: number]: Token } = {
     "WETH",
     "Wrapped Ether"
   )
+};
+
+export const USDC: { [chainId: number]: Token } = {
+  [ChainId.MAINNET]: new Token(
+      ChainId.MAINNET,
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      6,
+      "USDC",
+      "USD Coin"
+  ),
+  [ChainId.SEPOLIA]: new Token(
+      ChainId.SEPOLIA,
+      "0xCA6C31cc71fb8f00dC2C465299f605039e0E1f4b",
+      6,
+      "USDC",
+      "USD Coin"
+  ),
+};
+export const USDT: { [chainId: number]: Token } = {
+  [ChainId.MAINNET]: new Token(
+      ChainId.MAINNET,
+      "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      6,
+      "USDT",
+      "Tether USD"
+  ),
+  [ChainId.SEPOLIA]: new Token(
+      ChainId.SEPOLIA,
+      "0x7169D38820dfd117C3FA1f22a697dBA58d90BA06",
+      6,
+      "USDT",
+      "Tether USD"
+  ),
 };
 
 export const WNATIVE: { [chainId: number]: Token } = {
@@ -262,7 +313,10 @@ export const WNATIVE: { [chainId: number]: Token } = {
     "Wrapped Palm"
   ),
 };
-
+export const DAI: ChainTokenMap = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, '0xad6d458402f60fd3bd25163575031acdce07538d', 18, 'DAI', 'Dai Stablecoin'),
+}
 
 // function hardcodedSymbol(address: Address): string|null {
 //   if (address.toHex() === '0x0d840469d56c0c1725d1a64da6a7e9e0143f4a10') {
