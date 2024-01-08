@@ -11,6 +11,7 @@ export const XMONEY: ChainTokenMap = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, STAKING_ADDRESS[ChainId.MAINNET], 18, 'XMONEY', 'XMONEY'),
   [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, STAKING_ADDRESS[ChainId.ROPSTEN], 18, 'XMONEY', 'XMONEY'),
   [ChainId.SEPOLIA]: new Token(ChainId.SEPOLIA, STAKING_ADDRESS[ChainId.SEPOLIA], 18, 'XMONEY', 'XMONEY'),
+  [ChainId.MATIC_TESTNET]: new Token(ChainId.MATIC_TESTNET, STAKING_ADDRESS[ChainId.MATIC_TESTNET], 18, 'XMONEY', 'XMONEY'),
   // if uncomment next line, then build fails
   // [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, STAKING_ADDRESS[ChainId.BSC_TESTNET], 18, 'XMONEY', 'XMONEY'),
 }
@@ -18,6 +19,7 @@ export const MONEY: ChainTokenMap = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, MONEY_ADDRESS[ChainId.MAINNET], 18, 'MONEY', 'MONEY'),
   [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, MONEY_ADDRESS[ChainId.ROPSTEN], 18, 'MONEY', 'MONEY'),
   [ChainId.SEPOLIA]: new Token(ChainId.SEPOLIA, MONEY_ADDRESS[ChainId.SEPOLIA], 18, 'MONEY', 'MONEY'),
+  [ChainId.MATIC_TESTNET]: new Token(ChainId.MATIC_TESTNET, MONEY_ADDRESS[ChainId.MATIC_TESTNET], 18, 'MONEY', 'MONEY'),
   // if uncomment next line, then build fails
   // [ChainId.BSC_TESTNET]: new Token(ChainId.BSC_TESTNET, MONEY_ADDRESS[ChainId.BSC_TESTNET], 18, 'MONEY', 'MONEY'),
 }
@@ -101,6 +103,13 @@ export const WETH9: { [chainId: number]: Token } = {
     18,
     "WETH",
     "Wrapped Ether"
+  ),
+  [ChainId.MATIC_TESTNET]: new Token(
+      ChainId.MATIC_TESTNET,
+      WETH9_ADDRESS[ChainId.MATIC_TESTNET],
+      18,
+      "WETH",
+      "Wrapped Ether"
   ),
 
   [ChainId.OKEX]: new Token(
